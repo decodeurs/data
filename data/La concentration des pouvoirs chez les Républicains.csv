@@ -1,0 +1,355 @@
+id,pouvoir,annee,camp,detail
+0,presidence,1900,R,William McKinley
+1,presidence,1901,R,Theodore Roosevelt
+2,presidence,1902,R,Theodore Roosevelt
+3,presidence,1903,R,Theodore Roosevelt
+4,presidence,1904,R,Theodore Roosevelt
+5,presidence,1905,R,Theodore Roosevelt
+6,presidence,1906,R,Theodore Roosevelt
+7,presidence,1907,R,Theodore Roosevelt
+8,presidence,1908,R,Theodore Roosevelt
+9,presidence,1909,R,William H. Taft
+10,presidence,1910,R,William H. Taft
+11,presidence,1911,R,William H. Taft
+12,presidence,1912,R,William H. Taft
+13,presidence,1913,D,T. Woodrow Wilson
+14,presidence,1914,D,T. Woodrow Wilson
+15,presidence,1915,D,T. Woodrow Wilson
+16,presidence,1916,D,T. Woodrow Wilson
+17,presidence,1917,D,T. Woodrow Wilson
+18,presidence,1918,D,T. Woodrow Wilson
+19,presidence,1919,D,T. Woodrow Wilson
+20,presidence,1920,D,T. Woodrow Wilson
+21,presidence,1921,R,Warren G. Harding
+22,presidence,1922,R,Warren G. Harding
+23,presidence,1923,R,J. Calvin Coolidge
+24,presidence,1924,R,J. Calvin Coolidge
+25,presidence,1925,R,J. Calvin Coolidge
+26,presidence,1926,R,J. Calvin Coolidge
+27,presidence,1927,R,J. Calvin Coolidge
+28,presidence,1928,R,J. Calvin Coolidge
+29,presidence,1929,R,Herbert C. Hoover
+30,presidence,1930,R,Herbert C. Hoover
+31,presidence,1931,R,Herbert C. Hoover
+32,presidence,1932,R,Herbert C. Hoover
+33,presidence,1933,D,Franklin D. Roosevelt
+34,presidence,1934,D,Franklin D. Roosevelt
+35,presidence,1935,D,Franklin D. Roosevelt
+36,presidence,1936,D,Franklin D. Roosevelt
+37,presidence,1937,D,Franklin D. Roosevelt
+38,presidence,1938,D,Franklin D. Roosevelt
+39,presidence,1939,D,Franklin D. Roosevelt
+40,presidence,1940,D,Franklin D. Roosevelt
+41,presidence,1941,D,Franklin D. Roosevelt
+42,presidence,1942,D,Franklin D. Roosevelt
+43,presidence,1943,D,Franklin D. Roosevelt
+44,presidence,1944,D,Franklin D. Roosevelt
+45,presidence,1945,D,Harry S. Truman
+46,presidence,1946,D,Harry S. Truman
+47,presidence,1947,D,Harry S. Truman
+48,presidence,1948,D,Harry S. Truman
+49,presidence,1949,D,Harry S. Truman
+50,presidence,1950,D,Harry S. Truman
+51,presidence,1951,D,Harry S. Truman
+52,presidence,1952,D,Harry S. Truman
+53,presidence,1953,R,Dwight D. Eisenhower
+54,presidence,1954,R,Dwight D. Eisenhower
+55,presidence,1955,R,Dwight D. Eisenhower
+56,presidence,1956,R,Dwight D. Eisenhower
+57,presidence,1957,R,Dwight D. Eisenhower
+58,presidence,1958,R,Dwight D. Eisenhower
+59,presidence,1959,R,Dwight D. Eisenhower
+60,presidence,1960,R,Dwight D. Eisenhower
+61,presidence,1961,D,John F. Kennedy
+62,presidence,1962,D,John F. Kennedy
+63,presidence,1963,D,Lyndon B. Johnson
+64,presidence,1964,D,Lyndon B. Johnson
+65,presidence,1965,D,Lyndon B. Johnson
+66,presidence,1966,D,Lyndon B. Johnson
+67,presidence,1967,D,Lyndon B. Johnson
+68,presidence,1968,D,Lyndon B. Johnson
+69,presidence,1969,R,Richard M. Nixon
+70,presidence,1970,R,Richard M. Nixon
+71,presidence,1971,R,Richard M. Nixon
+72,presidence,1972,R,Richard M. Nixon
+73,presidence,1973,R,Richard M. Nixon
+74,presidence,1974,R,Gerald R. Ford
+75,presidence,1975,R,Gerald R. Ford
+76,presidence,1976,R,Gerald R. Ford
+77,presidence,1977,D,Jimmy Carter
+78,presidence,1978,D,Jimmy Carter
+79,presidence,1979,D,Jimmy Carter
+80,presidence,1980,D,Jimmy Carter
+81,presidence,1981,R,Ronald W. Reagan
+82,presidence,1982,R,Ronald W. Reagan
+83,presidence,1983,R,Ronald W. Reagan
+84,presidence,1984,R,Ronald W. Reagan
+85,presidence,1985,R,Ronald W. Reagan
+86,presidence,1986,R,Ronald W. Reagan
+87,presidence,1987,R,Ronald W. Reagan
+88,presidence,1988,R,Ronald W. Reagan
+89,presidence,1989,R,George H. W. Bush
+90,presidence,1990,R,George H. W. Bush
+91,presidence,1991,R,George H. W. Bush
+92,presidence,1992,R,George H. W. Bush
+93,presidence,1993,D,Bill Clinton
+94,presidence,1994,D,Bill Clinton
+95,presidence,1995,D,Bill Clinton
+96,presidence,1996,D,Bill Clinton
+97,presidence,1997,D,Bill Clinton
+98,presidence,1998,D,Bill Clinton
+99,presidence,1999,D,Bill Clinton
+100,presidence,2000,D,Bill Clinton
+101,presidence,2001,R,George W. Bush
+102,presidence,2002,R,George W. Bush
+103,presidence,2003,R,George W. Bush
+104,presidence,2004,R,George W. Bush
+105,presidence,2005,R,George W. Bush
+106,presidence,2006,R,George W. Bush
+107,presidence,2007,R,George W. Bush
+108,presidence,2008,R,George W. Bush
+109,presidence,2009,D,Barack Obama
+110,presidence,2010,D,Barack Obama
+111,presidence,2011,D,Barack Obama
+112,presidence,2012,D,Barack Obama
+113,presidence,2013,D,Barack Obama
+114,presidence,2014,D,Barack Obama
+115,presidence,2015,D,Barack Obama
+116,presidence,2016,D,Barack Obama
+117,presidence,2017,R,Donald J. Trump
+118,representants,1900,R,
+119,representants,1901,R,
+120,representants,1902,R,
+121,representants,1903,R,
+122,representants,1904,R,
+123,representants,1905,R,
+124,representants,1906,R,
+125,representants,1907,R,
+126,representants,1908,R,
+127,representants,1909,R,
+128,representants,1910,R,
+129,representants,1911,D,
+130,representants,1912,D,
+131,representants,1913,D,
+132,representants,1914,D,
+133,representants,1915,D,
+134,representants,1916,D,
+135,representants,1917,R,
+136,representants,1918,R,
+137,representants,1919,R,
+138,representants,1920,R,
+139,representants,1921,R,
+140,representants,1922,R,
+141,representants,1923,R,
+142,representants,1924,R,
+143,representants,1925,R,
+144,representants,1926,R,
+145,representants,1927,R,
+146,representants,1928,R,
+147,representants,1929,R,
+148,representants,1930,R,
+149,representants,1931,D,
+150,representants,1932,D,
+151,representants,1933,D,
+152,representants,1934,D,
+153,representants,1935,D,
+154,representants,1936,D,
+155,representants,1937,D,
+156,representants,1938,D,
+157,representants,1939,D,
+158,representants,1940,D,
+159,representants,1941,D,
+160,representants,1942,D,
+161,representants,1943,D,
+162,representants,1944,D,
+163,representants,1945,D,
+164,representants,1946,D,
+165,representants,1947,R,
+166,representants,1948,R,
+167,representants,1949,D,
+168,representants,1950,D,
+169,representants,1951,D,
+170,representants,1952,D,
+171,representants,1953,R,
+172,representants,1954,R,
+173,representants,1955,D,
+174,representants,1956,D,
+175,representants,1957,D,
+176,representants,1958,D,
+177,representants,1959,D,
+178,representants,1960,D,
+179,representants,1961,D,
+180,representants,1962,D,
+181,representants,1963,D,
+182,representants,1964,D,
+183,representants,1965,D,
+184,representants,1966,D,
+185,representants,1967,D,
+186,representants,1968,D,
+187,representants,1969,D,
+188,representants,1970,D,
+189,representants,1971,D,
+190,representants,1972,D,
+191,representants,1973,D,
+192,representants,1974,D,
+193,representants,1975,D,
+194,representants,1976,D,
+195,representants,1977,D,
+196,representants,1978,D,
+197,representants,1979,D,
+198,representants,1980,D,
+199,representants,1981,D,
+200,representants,1982,D,
+201,representants,1983,D,
+202,representants,1984,D,
+203,representants,1985,D,
+204,representants,1986,D,
+205,representants,1987,D,
+206,representants,1988,D,
+207,representants,1989,D,
+208,representants,1990,D,
+209,representants,1991,D,
+210,representants,1992,D,
+211,representants,1993,D,
+212,representants,1994,D,
+213,representants,1995,R,
+214,representants,1996,R,
+215,representants,1997,R,
+216,representants,1998,R,
+217,representants,1999,R,
+218,representants,2000,R,
+219,representants,2001,R,
+220,representants,2002,R,
+221,representants,2003,R,
+222,representants,2004,R,
+223,representants,2005,R,
+224,representants,2006,R,
+225,representants,2007,D,
+226,representants,2008,D,
+227,representants,2009,D,
+228,representants,2010,D,
+229,representants,2011,R,
+230,representants,2012,R,
+231,representants,2013,R,
+232,representants,2014,R,
+233,representants,2015,R,
+234,representants,2016,R,
+235,representants,2017,R,
+236,senat,1900,R,
+237,senat,1901,R,
+238,senat,1902,R,
+239,senat,1903,R,
+240,senat,1904,R,
+241,senat,1905,R,
+242,senat,1906,R,
+243,senat,1907,R,
+244,senat,1908,R,
+245,senat,1909,R,
+246,senat,1910,R,
+247,senat,1911,R,
+248,senat,1912,R,
+249,senat,1913,D,
+250,senat,1914,D,
+251,senat,1915,D,
+252,senat,1916,D,
+253,senat,1917,D,
+254,senat,1918,D,
+255,senat,1919,R,
+256,senat,1920,R,
+257,senat,1921,R,
+258,senat,1922,R,
+259,senat,1923,R,
+260,senat,1924,R,
+261,senat,1925,R,
+262,senat,1926,R,
+263,senat,1927,R,
+264,senat,1928,R,
+265,senat,1929,R,
+266,senat,1930,R,
+267,senat,1931,R,
+268,senat,1932,R,
+269,senat,1933,D,
+270,senat,1934,D,
+271,senat,1935,D,
+272,senat,1936,D,
+273,senat,1937,D,
+274,senat,1938,D,
+275,senat,1939,D,
+276,senat,1940,D,
+277,senat,1941,D,
+278,senat,1942,D,
+279,senat,1943,D,
+280,senat,1944,D,
+281,senat,1945,D,
+282,senat,1946,D,
+283,senat,1947,R,
+284,senat,1948,R,
+285,senat,1949,D,
+286,senat,1950,D,
+287,senat,1951,D,
+288,senat,1952,D,
+289,senat,1953,R,
+290,senat,1954,R,
+291,senat,1955,D,
+292,senat,1956,D,
+293,senat,1957,D,
+294,senat,1958,D,
+295,senat,1959,D,
+296,senat,1960,D,
+297,senat,1961,D,
+298,senat,1962,D,
+299,senat,1963,D,
+300,senat,1964,D,
+301,senat,1965,D,
+302,senat,1966,D,
+303,senat,1967,D,
+304,senat,1968,D,
+305,senat,1969,D,
+306,senat,1970,D,
+307,senat,1971,D,
+308,senat,1972,D,
+309,senat,1973,D,
+310,senat,1974,D,
+311,senat,1975,D,
+312,senat,1976,D,
+313,senat,1977,D,
+314,senat,1978,D,
+315,senat,1979,D,
+316,senat,1980,D,
+317,senat,1981,R,
+318,senat,1982,R,
+319,senat,1983,R,
+320,senat,1984,R,
+321,senat,1985,R,
+322,senat,1986,R,
+323,senat,1987,D,
+324,senat,1988,D,
+325,senat,1989,D,
+326,senat,1990,D,
+327,senat,1991,D,
+328,senat,1992,D,
+329,senat,1993,D,
+330,senat,1994,D,
+331,senat,1995,R,
+332,senat,1996,R,
+333,senat,1997,R,
+334,senat,1998,R,
+335,senat,1999,R,
+336,senat,2000,R,
+337,senat,2001,R,
+338,senat,2002,D,
+339,senat,2003,R,
+340,senat,2004,R,
+341,senat,2005,R,
+342,senat,2006,R,
+343,senat,2007,R,
+344,senat,2008,R,
+345,senat,2009,D,
+346,senat,2010,D,
+347,senat,2011,D,
+348,senat,2012,D,
+349,senat,2013,D,
+350,senat,2014,D,
+351,senat,2015,R,
+352,senat,2016,R,
+353,senat,2017,R,

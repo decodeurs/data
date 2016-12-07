@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Les données des Décodeurs - Visualiseur</title>
+    <meta name="author" content="Derek Eder">
+    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!--  <link href="css/dataTables.bootstrap.css" rel="stylesheet"> -->
+
+     <link href="css/custom.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/normalize.css">
+    <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/grille.css">
+    <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/base.css">
+    <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/fonts.css">
+    <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/couleurs.css">
+    <link rel="stylesheet" href="//s1.lemde.fr/medias/web/css/article.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+      <header>
+        <h1 class="tt2">Les données des Décodeurs</h1>
+      </header>
+
+      
+      <div id='index_pane'>
+          <p>Voici la liste des données mises à disposition par les Décodeurs. Cliquez sur une ligne pour afficher et télécharger le jeu de données.</p>
+          <table id='list-container'></table>
+      </div>
+
+      <hr />
+
+      <div id='preview_pane'>
+          <div id="backtotop">Remonter &#8593;</div>
+          <h2 class="tt3">Prévisualisation du fichier "<span id="nom_jeu"></span>"</h2>
+          <p id="download_link"></p>
+          <p id="file_description"></p>
+          <p id="file_type"></p>
+          <p id="file_date"></p>
+          <p id="file_link"></p>
+          
+          <div id='preview-container'></div>
+      </div>
+
+    <footer class='footer'>
+      <div class='container-fluid'>
+        <!-- <hr />
+        <p class='pull-right'><a href='https://github.com/derekeder/csv-to-html-table'>CSV to HTML Table</a> by <a href='http://derekeder.com'>Derek Eder</a></p> -->
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src='js/d3.v4.min.js'></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src='js/csv_to_html_table.js'></script>
+    <script src='js/spreadsheet_to_table.js'></script>
+    <script lang="javascript" src="js/xlsx.core.min.js"></script>
+    <script src="js/cpexcel.js"></script>
+    <script src="js/ods.js"></script>
+
+    <script>
+    
+      d3.csv("datas.csv", function(data) { /* Importation de l'index des datas */
+        
+        console.log(data)
+
+        table = $('#list-container').DataTable({
+              "data": data, //tableau de données
+              "columns": [ //Propriétés des colonnes
+                {  "data": "name","title": "Nom","type": "string"},
+                 {  "data": "description","title": "Description","type": "string"},
+                {  "data": "path","title": "Chemin","type": "string"},
+                {  "data": "link","title": "Article lié","type": "string","render":function ( data, type, full, meta ) {
+                 
+                    if(type == "display"){ // La version de filtre
+                          return '<a href="'+data+'" target="_blank">'+data+'</a>'
+                    }
+                    else { // La version interne non-altérée pour le tri et la recherche
+                      return data;
+                    }
+                  }},
+                {  "data": "date","title": "Date","type": "string"},
+              ],
+              "scrollY": "400px", // Hauteur du tableau
+              "scrollX": true,
+              "scrollCollapse": true,
+               "responsive": true,
+               "paging": false, // Pagination des résultats
+               "order": [[ 4, 'desc' ]], // Par quelle colonne se fait le tri par défaut ? En ascendant (asc) ou descendant (desc) ?
+               "language":{
+                    "zeroRecords": "Pas de données disponibles avec cette recherche",
+                    "lengthMenu": "_MENU_ entrées affichées",
+                    "info": "Résultats _START_ à _END_ (sur _TOTAL_)",
+                    "search": "Rechercher : ",
+                    "infoEmpty": "Pas de données disponibles avec cette recherche"
+               },
+               initComplete: function () {
+                   $("#list-container tr").click(function(){
+                        id = $(this).attr("id");
+                        filename = data[id].name;
+                        filedescription = data[id].description;
+                        filepath = data[id].path;
+                        filedate = data[id].date;
+                        filelink = data[id].link;;
+                        filetype = filepath.split('.').pop()
+                        openPreview(filepath,filename,filedescription,filedate,filetype,filelink)
+                    })
+               },
+               "createdRow": function ( row, data, index ) {
+                  $(row).attr('id', index);
+               }
+        });
+    });
+
+   
+
+
+
+
+
+
+
+      function format_link(link){
+        if (link)
+          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+        else
+          return "";
+      }
+
+      function openPreview(filepath,filename,filedescription,filedate,filetype,filelink){
+          $("#preview-container").html("")
+
+          if(filetype == "csv"){
+                console.info("Ouverture d'un fichier CSV")
+
+                CsvToHtmlTable.init({
+                  csv_path: 'data/'+filepath, 
+                  element: 'preview-container', 
+                  allow_download: true,
+                  csv_options: {separator: ',', delimiter: '"'},
+                  datatables_options: {
+                    "paging": false,
+                    "scrollY": "350px", // Hauteur du tableau
+                    "scrollX": true,
+                    "scrollCollapse": true,
+                     "responsive": true,
+                     "language":{
+                          "zeroRecords": "Pas de données disponibles avec cette recherche",
+                          "lengthMenu": "_MENU_ entrées affichées",
+                          "info": "Résultats _START_ à _END_ (sur _TOTAL_)",
+                          "search": "Rechercher : ",
+                          "infoEmpty": "Pas de données disponibles avec cette recherche"
+                     },
+                  },
+                  custom_formatting: [[4, format_link]]
+               });
+          }
+
+          if(filetype == "ods" || filetype == "xls" || filetype == "xlsx"){
+                console.info("Ouverture d'un fichier ODS/XLS/XLSX")
+                
+                SpreadsheetToHtmlTable.init({
+                    filepath:filepath,
+                    datatables_options:{
+                    "paging": false,
+                    "order": [],
+                    "scrollY": "350px", // Hauteur du tableau,
+                    "scrollX": true,
+                    "scrollCollapse": true,
+                     "responsive": true,
+                     "language":{
+                          "zeroRecords": "Pas de données disponibles avec cette recherche",
+                          "lengthMenu": "_MENU_ entrées affichées",
+                          "info": "Lignes _START_ à _END_ (sur _TOTAL_)",
+                          "search": "Rechercher : ",
+                          "infoEmpty": "Pas de données disponibles avec cette recherche"
+                     },
+                  }
+                })
+                
+          }
+          
+          /* On ajoute les métadonnées du fichier */
+          $("#nom_jeu").html(filename)
+          if(filedescription) $("#file_description").html(filedescription)
+          if(filetype) $("#file_type").html("Type : "+filetype)
+          if(filedate) $("#file_date").html("Date : "+filedate)
+          if(filelink) $("#file_date").html("&rsaquo; <a href='"+filelink+"' target='_blank'>Article lié</a>")
+
+          /* On affiche le panneau de prévisualisation et on scrolle jusqu'à lui */
+          $("#preview_pane").show("fade")
+          $("html,body").animate({
+              scrollTop:$("#preview_pane").offset().top
+          },600)
+
+
+      }
+
+      $("#backtotop").click(function(){
+            $("#preview_pane").hide("fade")
+            $("html,body").animate({
+              scrollTop:$("#index_pane").offset().top
+            },600)
+      })
+
+
+
+     
+
+      
+    </script>
+  </body>
+</html>
