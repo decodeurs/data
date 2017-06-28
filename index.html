@@ -30,12 +30,12 @@
   </head>
 
   <body>
-  
+
       <header>
         <h1 class="tt2">Les données des Décodeurs</h1>
       </header>
 
-      
+
       <div id='index_pane'>
           <p>Voici la liste des données mises à disposition par les Décodeurs. Cliquez sur une ligne pour afficher et télécharger le jeu de données.</p>
           <table id='list-container'></table>
@@ -51,7 +51,7 @@
           <p id="file_type"></p>
           <p id="file_date"></p>
           <p id="file_link"></p>
-          
+
           <div id='preview-container'></div>
       </div>
 
@@ -79,9 +79,9 @@
     <script src="js/ods.js"></script>
 
     <script>
-    
+
       d3.csv("liste_datas.csv", function(data) { /* Importation de l'index des datas */
-        
+
         console.log(data)
 
         table = $('#list-container').DataTable({
@@ -91,7 +91,7 @@
                  {  "data": "description","title": "Description","type": "string"},
                 {  "data": "path","title": "Chemin","type": "string"},
                 {  "data": "link","title": "Article lié","type": "string","render":function ( data, type, full, meta ) {
-                 
+
                     if(type == "display"){ // La version de filtre
                           return '<a href="'+data+'" target="_blank">'+data+'</a>'
                     }
@@ -99,6 +99,7 @@
                       return data;
                     }
                   }},
+                  {  "data": "licence","title": "Licence","type": "string"},
                 {  "data": "date","title": "Date","type": "string"},
               ],
               "scrollY": "400px", // Hauteur du tableau
@@ -132,7 +133,7 @@
         });
     });
 
-   
+
 
 
 
@@ -154,8 +155,8 @@
                 console.info("Ouverture d'un fichier CSV")
 
                 CsvToHtmlTable.init({
-                  csv_path: 'data/'+filepath, 
-                  element: 'preview-container', 
+                  csv_path: 'data/'+filepath,
+                  element: 'preview-container',
                   allow_download: true,
                   csv_options: {separator: ',', delimiter: '"'},
                   datatables_options: {
@@ -178,7 +179,7 @@
 
           if(filetype == "ods" || filetype == "xls" || filetype == "xlsx"){
                 console.info("Ouverture d'un fichier ODS/XLS/XLSX")
-                
+
                 SpreadsheetToHtmlTable.init({
                     filepath:filepath,
                     datatables_options:{
@@ -197,9 +198,9 @@
                      },
                   }
                 })
-                
+
           }
-          
+
           /* On ajoute les métadonnées du fichier */
           $("#nom_jeu").html(filename)
           if(filedescription) $("#file_description").html(filedescription)
@@ -225,9 +226,9 @@
 
 
 
-     
 
-      
+
+
     </script>
   </body>
 </html>
